@@ -17,7 +17,7 @@ class Magazine < ActiveRecord::Base
     end.max
 
     all.find do |magazine|
-      magazine.subscription.count ==  highest_subscriber_count
+      magazine.subscriptions.count ==  highest_subscriber_count
   # find which magazine had the most subscribers and return that
     end
   end
